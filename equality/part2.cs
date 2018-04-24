@@ -59,5 +59,16 @@ namespace equality
 			Assert.That((object)p1 != (object)p3);
 			Assert.That(!p1.Equals(p2));
 		}
+
+		[Test]
+		public void Object_StaticEqual()
+		{
+			Person p1 = new Person("Ehsan Sajjad");
+
+			Assert.That(!p1.Equals(null));
+			Assert.That(!object.Equals(p1, null));
+			Assert.That(object.Equals(null, null));
+			
+		}
 	}
 }
