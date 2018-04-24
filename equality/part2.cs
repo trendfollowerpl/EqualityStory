@@ -68,7 +68,16 @@ namespace equality
 			Assert.That(!p1.Equals(null));
 			Assert.That(!object.Equals(p1, null));
 			Assert.That(object.Equals(null, null));
-			
+		}
+
+		[Test]
+		public void Object_ReferenceEqual()
+		{
+			string s1 = "Ehsan Sajjad";
+			string s2 = string.Copy(s1);
+
+			Assert.That(s1.Equals(s2));
+			Assert.That(!object.ReferenceEquals(s1, s2));
 		}
 	}
 }
