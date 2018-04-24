@@ -32,5 +32,19 @@ namespace equality
 			Assert.That(delegate1.Equals((object)(delegate3)));
 			Assert.That(delegate2.Equals((object)(delegate3)));
 		}
+
+		[Test]
+		public void Tuple_Equal()
+		{
+			var population1 = new Tuple<string, int, int, int, int, int, int>(
+						   "New York", 7891957, 7781984,
+						   7894862, 7071639, 7322564, 8008278);
+			var population2 = new Tuple<string, int, int, int, int, int, int>(
+						   "New York", 7891957, 7781984,
+						   7894862, 7071639, 7322564, 8008278);
+
+			Assert.That(population1.Equals(population2));
+			Assert.That((object)population1 != (object)population2);
+		}
 	}
 }
