@@ -68,5 +68,14 @@ namespace equality
 			Assert.That(s1 != s2);
 			Assert.That(s1.Equals(s2, StringComparison.InvariantCultureIgnoreCase));
 		}
+
+		[Test]
+		public void FloatEquality()
+		{
+			float num1 = 2.999999999999999f;
+			float num2 = 3.000000000000000f;
+
+			Assert.That(num1 == num2);
+		}
 	}
 }
