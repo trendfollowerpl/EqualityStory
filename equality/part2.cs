@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using equality.TestObjects;
 using NUnit.Framework;
 
 namespace equality
@@ -45,6 +46,18 @@ namespace equality
 
 			Assert.That(population1.Equals(population2));
 			Assert.That((object)population1 != (object)population2);
+		}
+
+		[Test]
+		public void Struct_Equal()
+		{
+			PersonStruct p1 = new PersonStruct("Ehsan Sajjad");
+			PersonStruct p2 = new PersonStruct("Ahsan Sajjad");
+			PersonStruct p3 = new PersonStruct("Ehsan Sajjad");
+
+			Assert.That(p1.Equals(p3));
+			Assert.That((object)p1 != (object)p3);
+			Assert.That(!p1.Equals(p2));
 		}
 	}
 }
