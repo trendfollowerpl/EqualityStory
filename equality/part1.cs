@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using equality.TestObjects;
 using NUnit.Framework;
 
 namespace equality
 {
-	class Person
-	{
-		public string Name { get; set; }
-	}
 
 	[TestFixture]
 	public class part1
@@ -24,10 +21,10 @@ namespace equality
 		[Test]
 		public void ReferenceEquality()
 		{
-			Person p1 = new Person();
+			var p1 = new Person();
 			p1.Name = "Ehsan Sajjad";
 
-			Person p2 = new Person();
+			var p2 = new Person();
 			p2.Name = "Ehsan Sajjad";
 
 			Assert.That(!p1.Equals(p2));//reference equality

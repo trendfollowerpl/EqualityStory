@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="part1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestObjects\Person.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
