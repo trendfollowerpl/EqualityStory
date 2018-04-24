@@ -21,11 +21,9 @@ namespace equality
 		[Test]
 		public void ReferenceEquality()
 		{
-			var p1 = new Person();
-			p1.Name = "Ehsan Sajjad";
+			var p1 = new Person("Ehsan Sajjad");
 
-			var p2 = new Person();
-			p2.Name = "Ehsan Sajjad";
+			var p2 = new Person("Ehsan Sajjad");
 
 			Assert.That(!p1.Equals(p2));//reference equality
 			Assert.That(p1 != p2);////reference equality
