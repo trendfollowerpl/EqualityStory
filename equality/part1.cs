@@ -58,5 +58,15 @@ namespace equality
 			int num1 = 2, num2 = 2;
 			Assert.That((IComparable<int>)num1 != (IComparable<int>)num2);
 		}
+
+		[Test]
+		public void StringCaseInsensitiveEquality()
+		{
+			string s1 = "EQUALITY";
+			string s2 = "equality";
+
+			Assert.That(s1 != s2);
+			Assert.That(s1.Equals(s2, StringComparison.InvariantCultureIgnoreCase));
+		}
 	}
 }
