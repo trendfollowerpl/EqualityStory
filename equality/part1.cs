@@ -45,7 +45,7 @@ namespace equality
 		}
 
 		[Test]
-		public void primitivesCastedToObject()
+		public void PrimitivesCastedToObject()
 		{
 			int num1 = 2, num2 = 2;
 
@@ -53,7 +53,7 @@ namespace equality
 		}
 
 		[Test]
-		public void primitivesCastedToIComparableInterface()
+		public void PrimitivesCastedToIComparableInterface()
 		{
 			int num1 = 2, num2 = 2;
 			Assert.That((IComparable<int>)num1 != (IComparable<int>)num2);
@@ -70,12 +70,21 @@ namespace equality
 		}
 
 		[Test]
-		public void FloatEquality()
+		public void FloatEquality1()
 		{
 			float num1 = 2.999999999999999f;
 			float num2 = 3.000000000000000f;
 
 			Assert.That(num1 == num2);
+		}
+
+		[Test]
+		public void FloatEquality2()
+		{
+			float num1 = 2.999999999999999f;
+			float num2 = 0.000000000000001f;
+
+			Assert.That(num1 + num2 != 3f);
 		}
 	}
 }
