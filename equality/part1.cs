@@ -70,7 +70,7 @@ namespace equality
 		}
 
 		[Test]
-		public void FloatEquality1()
+		public void FloatEquality_roundingErrors()
 		{
 			float num1 = 2.999999999999999f;
 			float num2 = 3.000000000000000f;
@@ -79,7 +79,7 @@ namespace equality
 		}
 
 		[Test]
-		public void FloatEquality2()
+		public void FloatEquality2_roundingErrors()
 		{
 			float num1 = 2.999999999999999f;
 			float num2 = 0.000000000000001f;
